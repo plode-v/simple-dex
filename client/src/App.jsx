@@ -1,17 +1,18 @@
-import { Route, Routes } from "react-router-dom"
-import { Header, Swap } from "./components"
-import { colors } from "./constants"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Header, Swap, Tokens } from "./components"
 
 function App() {
 
 	return (
-		<div className="bg-red-400">
-			<Header />
-			<div>
+		<div className="from-[#16223b] to-[#080e1c] bg-gradient-to-bl">
+			<Router>
+				<Header />
 				<Routes>
-					<Route path="/" element={Swap} />
+					<Route path="/" element={<Swap />} />
+					<Route path="/tokens" element={<Tokens />} />
 				</Routes>
-			</div>	
+			</Router>
+
 		</div>
 	)
 }
