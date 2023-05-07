@@ -1,6 +1,6 @@
 const Tokens = () => {
     return (
-        <div>Tokens</div>
+        <div className="h-screen">Tokens</div>
     )
 }
 

@@ -1,3 +1,5 @@
 export { default as Header } from "./Header"
 export { default as Swap } from "./Swap"
 export { default as Tokens } from "./Tokens"
+export { default as TradeBox} from "./TradeBox"
+export { default as Switch} from "./Switch"
