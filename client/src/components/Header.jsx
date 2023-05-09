@@ -1,7 +1,14 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
-import { tokenList } from "../constants"
 
 const Header = () => {
+
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleNavbar = () => {
+		setIsOpen(!isOpen);
+	}
+
 	return (
 		<nav className="font-epilogue font-semibold py-5 text-white fixed w-full">
 			<div className={`flex items-center justify-between px-[4vw]`}>
@@ -9,6 +16,11 @@ const Header = () => {
 					<li>
 						<img src="" alt="" />
 					</li>
+					<div className="lg:hidden">
+						<button type="button" className="focus:outline-none" onClick={toggleNavbar}>
+							menu
+						</button>
+					</div>
 					<Link to="/tokens">
 						<li className="hover:bg-[#9ba4b525] hover:opacity-80 py-2 px-4 rounded-full hover:scale-105 duration-100">
 							Tokens
